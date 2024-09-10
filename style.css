@@ -5,6 +5,7 @@
   --Black: #151515;
   --Grey: #d9d9d9;
   --Green: #4ee1a0;
+  --Dark-Grey: #242424;
 }
 
 *,
@@ -110,7 +111,7 @@ nav {
   border-bottom: 0.25rem solid var(--Green, #4ee1a0);
 }
 
-.hero__msg .btn {
+.btn {
   color: var(--White, #fff);
   font-size: 1rem;
   font-style: normal;
@@ -142,7 +143,7 @@ nav {
   text-align: center;
 }
 
-.skills h2 {
+.skills span {
   color: var(--White, #fff);
   font-size: 2rem;
   line-height: 2.5rem;
@@ -161,4 +162,106 @@ nav {
   position: absolute;
   top: 86.5rem;
   right: 0;
+}
+
+.projects {
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  letter-spacing: -0.071rem;
+}
+
+.projects .col {
+  width: 100%;
+}
+
+.project__img {
+  background: lightgray 0px 0px / 100% 100% no-repeat;
+  margin-bottom: 1.25rem;
+}
+
+.project__img img {
+  width: 100%;
+}
+
+.project__title {
+  margin-bottom: 0.44rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.project__skill {
+  justify-content: flex-start;
+  gap: 1.13rem;
+  margin-bottom: 1.25rem;
+}
+
+.project__skill p {
+  color: var(--Grey, #d9d9d9);
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.75rem;
+}
+
+.project__links {
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+footer {
+  background: var(--Dark-Grey, #242424);
+  padding: 3.75rem 0 6.15rem 0;
+}
+
+h4 {
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  letter-spacing: -0.071rem;
+  margin-bottom: 1.25rem;
+}
+
+.contact p {
+  color: var(--Grey, #d9d9d9);
+  text-align: center;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.625rem;
+  margin-bottom: 3.13rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+input {
+  border: none;
+  border-bottom: 0.0625rem solid var(--White);
+  background-color: transparent;
+  padding: 0 0 1.06rem 1.5rem;
+  width: 100%;
+}
+
+#message {
+  padding: 0 0 5.06rem 1.5rem;
+}
+
+::placeholder {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.625rem;
+  letter-spacing: -0.01388rem;
+}
+
+.third-oval--rings {
 }
