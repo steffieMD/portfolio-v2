@@ -87,7 +87,6 @@ nav {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  border-bottom: 0.0625rem solid var(--White);
   padding-top: 2.5rem;
   padding-bottom: 5rem;
 }
@@ -111,7 +110,7 @@ nav {
   border-bottom: 0.25rem solid var(--Green, #4ee1a0);
 }
 
-.hero__msg a {
+.hero__msg .btn {
   color: var(--White, #fff);
   font-size: 1rem;
   font-style: normal;
@@ -121,4 +120,45 @@ nav {
   text-transform: uppercase;
   text-decoration: none;
   border-bottom: 0.25rem solid var(--Green, #4ee1a0);
+  cursor: pointer;
+  padding-bottom: 0.63rem;
+}
+
+.hero__msg a:hover,
+.hero__msg a:focus,
+.fa-brands:hover,
+.fa-brands:focus {
+  transform: translateY(-20%);
+  color: var(--Green);
+}
+
+.skills {
+  border-top: 0.0625rem solid var(--White);
+  border-bottom: 0.0625rem solid var(--White);
+  padding: 2.5rem 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.skills h2 {
+  color: var(--White, #fff);
+  font-size: 2rem;
+  line-height: 2.5rem;
+  letter-spacing: -0.0625rem;
+}
+
+.skills p {
+  color: var(--Grey, #d9d9d9);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.625rem;
+}
+
+.second-oval--rings {
+  position: absolute;
+  top: 86.5rem;
+  right: 0;
 }
