@@ -241,6 +241,9 @@ form {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  border-bottom: 0.0625rem solid var(--White);
+  padding-bottom: 6.19rem;
+  align-items: flex-end;
 }
 
 input {
@@ -264,4 +267,15 @@ input {
 }
 
 .third-oval--rings {
+  position: absolute;
+  top: 218.44rem;
+}
+
+.footer--links {
+  width: min(46.4%, 174.207px);
+  margin: 2.44rem auto -1.75rem auto;
+}
+
+.footer--links .row .logo {
+  margin-top: 0;
 }
