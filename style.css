@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
+:root {
+  --White: #fff;
+  --Black: #151515;
+  --Grey: #d9d9d9;
+  --Green: #4ee1a0;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--White, #fff);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  background: var(--Black, #151515);
+}
+
+.container {
+  margin: 0 1rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fa-brands {
+  color: var(--White, #fff);
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+nav {
+  flex-direction: column;
+  text-align: center;
+  margin: 0 0.625rem;
+}
+
+.logo {
+  color: var(--White, #fff);
+  line-height: 2rem;
+  letter-spacing: -0.02081rem;
+  margin: 1.25rem 0;
+}
+
+.hero {
+  background: linear-gradient(180deg, rgba(36, 36, 36, 0) 0.65%, #242424 100%);
+  width: min(46.4%, 174.207px);
+  margin: 0 auto;
+  flex-direction: column;
+  gap: 3.06rem;
+}
+
+.hero--img {
+  width: min(100%, 174.207px);
+  background: url(./assets/jpg/steff-metieh.png) 0px 0px / 100% 100% no-repeat;
+  width: min(174.207px, 100%);
+  height: 242px;
+  position: relative;
+  z-index: 1000;
+}
+
+.oval--rings {
+  position: absolute;
+  top: 7.75rem;
+  z-index: -500;
+}
+
+.semi-circle {
+  position: absolute;
+  top: 15.87rem;
+  right: 0;
+  z-index: -50;
+}
+
+.hero__msg {
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  border-bottom: 0.0625rem solid var(--White);
+  padding-top: 2.5rem;
+  padding-bottom: 5rem;
+}
+
+.hero__msg h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  letter-spacing: -0.071rem;
+}
+
+.hero__msg p {
+  color: var(--Grey, #d9d9d9);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.625rem;
+}
+
+.underline__text {
+  border-bottom: 0.25rem solid var(--Green, #4ee1a0);
+}
+
+.hero__msg a {
+  color: var(--White, #fff);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.625rem;
+  letter-spacing: 0.14288rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 0.25rem solid var(--Green, #4ee1a0);
+}
