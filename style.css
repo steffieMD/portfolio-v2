@@ -30,6 +30,11 @@ body {
   margin: 0 1rem;
 }
 
+.box {
+  margin: 0 auto;
+  max-width: 1110px;
+}
+
 .row {
   display: flex;
   justify-content: space-between;
@@ -55,20 +60,31 @@ nav {
 }
 
 .hero {
-  background: linear-gradient(180deg, rgba(36, 36, 36, 0) 0.65%, #242424 100%);
-  width: min(46.4%, 174.207px);
   margin: 0 auto;
   flex-direction: column;
-  gap: 3.06rem;
+  align-items: center;
+  justify-content: center;
+  /* gap: 3.06rem; */
+}
+
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero--img {
   width: min(100%, 174.207px);
-  background: url(./assets/jpg/steff-metieh.png) 0px 0px / 100% 100% no-repeat;
+  background: url(./assets/jpg/steff-metieh.png) 0px 0px / 100% 100% no-repeat,
+    linear-gradient(180deg, rgba(36, 36, 36, 0) 0.65%, #242424 100%);
   width: min(174.207px, 100%);
   height: 242px;
-  position: relative;
-  z-index: 1000;
+}
+
+nav {
+  background: linear-gradient(180deg, rgba(36, 36, 36, 0) 100%, #242424 0.65%);
+  width: min(174.207px, 100%);
 }
 
 .oval--rings {
@@ -81,7 +97,7 @@ nav {
   position: absolute;
   top: 15.87rem;
   right: 0;
-  z-index: -50;
+  z-index: 500;
 }
 
 .hero__msg {
@@ -128,7 +144,9 @@ nav {
 .hero__msg a:hover,
 .hero__msg a:focus,
 .fa-brands:hover,
-.fa-brands:focus {
+.fa-brands:focus,
+a:hover,
+a:focus {
   transform: translateY(-20%);
   color: var(--Green);
 }
@@ -217,6 +235,13 @@ nav {
 footer {
   background: var(--Dark-Grey, #242424);
   padding: 3.75rem 0 6.15rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .container {
+  max-width: 1110px;
 }
 
 h4 {
@@ -268,7 +293,7 @@ input {
 
 .third-oval--rings {
   position: absolute;
-  top: 218.44rem;
+  top: 294.44rem;
 }
 
 .footer--links {
@@ -278,4 +303,46 @@ input {
 
 .footer--links .row .logo {
   margin-top: 0;
+}
+
+@media screen and (min-width: 601px) {
+  .hero,
+  .footer--links,
+  nav {
+    width: 100%;
+  }
+
+  nav {
+    flex-direction: row;
+  }
+
+  .social--links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .hero--img {
+    float: right;
+    width: 33%;
+    height: 30.375rem;
+  }
+
+  .hero__main {
+    width: 100%;
+  }
+
+  .hero__msg {
+    float: left;
+    width: 67%;
+  }
+
+  .hero {
+    background: linear-gradient(90deg, transparent 65%, #242424 35%);
+  }
+
+  header {
+    margin: 0 0;
+  }
 }
