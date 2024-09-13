@@ -133,7 +133,8 @@ nav {
   border-bottom: 0.25rem solid var(--Green, #4ee1a0);
 }
 
-.btn {
+.btn,
+a {
   color: var(--White, #fff);
   font-size: 1rem;
   font-style: normal;
