@@ -74,6 +74,12 @@ nav {
   justify-content: center;
 }
 
+.hero__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .hero--img {
   width: min(100%, 174.207px);
   background: url(./assets/jpg/steff-metieh.png) 0px 0px / 100% 100% no-repeat,
@@ -135,10 +141,12 @@ nav {
   line-height: 1.625rem;
   letter-spacing: 0.14288rem;
   text-transform: uppercase;
-  text-decoration: none;
-  border-bottom: 0.25rem solid var(--Green, #4ee1a0);
+  text-decoration: underline var(--Green);
+  text-underline-offset: 0.94rem;
+  text-decoration-thickness: 0.25rem;
   cursor: pointer;
   padding-bottom: 0.63rem;
+  align-self: center;
 }
 
 .hero__msg a:hover,
@@ -182,14 +190,18 @@ a:focus {
   right: 0;
 }
 
+.project__section {
+  margin-top: 5rem;
+}
+
 .projects {
-  padding: 5rem 0;
+  padding: 2.75rem 0;
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
 }
 
-.projects h2 {
+section h2 {
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: -0.071rem;
@@ -266,7 +278,6 @@ form {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  border-bottom: 0.0625rem solid var(--White);
   padding-bottom: 6.19rem;
   align-items: flex-end;
 }
@@ -275,12 +286,17 @@ input {
   border: none;
   border-bottom: 0.0625rem solid var(--White);
   background-color: transparent;
-  padding: 0 0 1.06rem 1.5rem;
+  padding: 1rem 0 1.06rem 1.5rem;
   width: 100%;
+  color: var(--White);
+}
+input:focus,
+input:hover {
+  border-bottom: 0.0625rem solid var(--Green);
 }
 
 #message {
-  padding: 0 0 5.06rem 1.5rem;
+  padding: 1rem 0 5.06rem 1.5rem;
 }
 
 ::placeholder {
@@ -293,7 +309,7 @@ input {
 
 .third-oval--rings {
   position: absolute;
-  top: 294.44rem;
+  top: 310rem;
 }
 
 .footer--links {
@@ -301,11 +317,36 @@ input {
   margin: 2.44rem auto -1.75rem auto;
 }
 
+.bottom-footer {
+  width: 100%;
+}
+
+.footer-section {
+  border-top: 0.0625rem solid var(--White);
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1110px;
+}
+
 .footer--links .row .logo {
   margin-top: 0;
 }
 
+.contact .btn {
+  width: auto;
+  border-bottom: none;
+}
+
 @media screen and (min-width: 601px) {
+  .semi-circle {
+    top: 26rem;
+  }
+
+  .third-oval--rings {
+    position: absolute;
+    top: 200rem;
+  }
+
   .hero,
   .footer--links,
   nav {
@@ -321,28 +362,221 @@ input {
     justify-content: space-between;
     align-items: center;
     gap: 1.5rem;
+    margin-right: 1.82rem;
   }
 
   .hero--img {
     float: right;
-    width: 33%;
+    width: 40%;
     height: 30.375rem;
+    background: url(./assets/jpg/steff-metieh.png) 0px 0px / 100% 100% no-repeat,
+      #242424;
+    position: relative;
+    z-index: 80;
   }
 
   .hero__main {
+    display: block;
     width: 100%;
+    margin: 0 1rem -30rem 1rem;
   }
 
   .hero__msg {
     float: left;
-    width: 67%;
+    width: 72%;
+    position: relative;
+    z-index: 100;
+    bottom: 30rem;
+    padding-bottom: 2rem;
+  }
+
+  .hero__msg p {
+    margin-top: 1rem;
+    text-align: left;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.75rem;
   }
 
   .hero {
-    background: linear-gradient(90deg, transparent 65%, #242424 35%);
+    background: linear-gradient(90deg, transparent 60%, #242424 40%);
   }
 
-  header {
-    margin: 0 0;
+  .hero__msg a {
+    margin-right: auto;
+  }
+
+  .skills {
+    border-bottom: none;
+    margin-bottom: 3.75rem;
+    text-align: left;
+    column-gap: 0;
+    row-gap: 3.25rem;
+  }
+
+  .skills .col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.87rem;
+  }
+
+  .skills,
+  .projects {
+    display: grid;
+  }
+
+  .project__section {
+    margin-top: 3.75rem;
+  }
+
+  .skills span {
+    color: var(--White, #fff);
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3.5rem;
+    letter-spacing: -0.09375rem;
+  }
+
+  .skills p {
+    color: var(--Grey, #d9d9d9);
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.75rem;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  #header {
+    margin-right: 0rem;
+  }
+
+  #main {
+    margin-top: 5rem;
+  }
+
+  .skills,
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  section h2 {
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 4.5rem;
+    letter-spacing: -0.12781rem;
+  }
+
+  .contact {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 699px) {
+  .hero__msg h1 {
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 4.5rem;
+    letter-spacing: -0.12781rem;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 818px) and (max-width: 900px) {
+  .hero__msg p {
+    margin-top: 5rem;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  .hero__msg h1 {
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 4.5rem;
+    letter-spacing: -0.12781rem;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .hero__msg h1 {
+    font-family: "Space Grotesk";
+    font-size: 5.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 5.5rem;
+    letter-spacing: -0.15625rem;
+    text-align: left;
+  }
+
+  #main {
+    margin-top: 4.06rem;
+  }
+
+  .hero--img {
+    width: 40%;
+  }
+
+  .hero__msg {
+    width: 73.5%;
+    padding-bottom: 0;
+  }
+
+  .hero__msg p {
+    margin-right: 16.31rem;
+    margin-top: 1rem;
+  }
+
+  .skills {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  section h2 {
+    font-size: 5.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 5.5rem;
+    letter-spacing: -0.15625rem;
+  }
+
+  .contact {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .contact .col {
+    width: 40%;
+  }
+
+  .contact .btn {
+    margin-left: auto;
+    width: auto;
+    border-bottom: none;
+  }
+
+  .contact h4,
+  .contact p {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .hero__msg p {
+    margin-right: 16.31rem;
+    margin-top: 4rem;
+  }
+
+  .skills {
+    margin-top: 8rem;
   }
 }
