@@ -32,28 +32,16 @@ function showAlert() {
     if (nameEl.value === "") {
       nameEl.style.borderBottom = "0.0625rem solid #FF6F5B";
 
-      nameEl.insertAdjacentHTML(
-        "afterend",
-        "<h5 class='error' style='color:#ff6f5b; font-size:0.75rem; font-style:normal; font-weight:500; line-height:1rem; letter-spacing:-0.01044rem'>Sorry, invalid format here</h5>"
-      );
-
-      //   if (!document.querySelector(".error")) {
-      //     nameEl.insertAdjacentHTML(
-      //       "afterend",
-      //       "<p class='error' style='color:#ff6f5b; font-size:0.75rem; font-style:normal; font-weight:500; line-height:1rem; letter-spacing:-0.01044rem'>Sorry, invalid format here</p>"
-      //     );
-      //   }
+      if (!document.querySelector(".name-error")) {
+        nameEl.insertAdjacentHTML(
+          "afterend",
+          "<h5 class='name-error' style='color:#ff6f5b; font-size:0.75rem; font-style:normal; font-weight:500; line-height:1rem; letter-spacing:-0.01044rem'>Sorry, invalid format here</h5>"
+        );
+      }
     }
 
     return false;
-  } else {
-    // email.addEventListener("mouseover", () => {
-    //   email.style.borderBottom = "0.0625rem solid #4ee1a0";
-    // });
-    // email.addEventListener("mouseout", () => {
-    //   email.style.borderBottom = "0.0625rem solid #fff";
-    // });
-  }
+  } else null;
 }
 
 // Event Listeners
@@ -72,3 +60,12 @@ projectsEl.addEventListener("mouseout", (e) => {
 btnSubmit.addEventListener("click", (e) => {
   showAlert();
 });
+
+document.addEventListener("DOMContentLoaded", function (event) {
+  const scrollpos = localStorage.getItem("scrollpos");
+  if (scrollpos) window.scrollTo(0, scrollpos);
+});
+
+window.onscroll = function (e) {
+  localStorage.setItem("scrollpos", window.scrollY);
+};

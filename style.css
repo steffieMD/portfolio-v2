@@ -155,7 +155,9 @@ a {
 .fa-brands:hover,
 .fa-brands:focus,
 a:hover,
-a:focus {
+a:focus,
+#btn-submit:hover,
+#btn-submit:focus {
   transform: translateY(-20%);
   color: var(--Green);
 }
